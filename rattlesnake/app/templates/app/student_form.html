@@ -1,0 +1,31 @@
+<h1>Student Form Create</h1>
+<form method="POST">{% csrf_token %}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>{{ form.name }}</td>
+        </tr>
+        <tr>
+            <td>Identity Number</td>
+            <td>:</td>
+            <td>{{ form.identityNumber }}</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>:</td>
+            <td>{{ form.department }}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td>{{ form.address }}</td>
+        </tr>
+        <tr>
+            <td>
+                <a class="btn btn-default" href="{% url 'student_list' %}">Cancel</a>
+                <input type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
+</form>
